@@ -48,11 +48,7 @@ namespace Bath_Revision_Project
         private void button2_Click(object sender, EventArgs e)
         {
             string Task = InputBox.Text;
-            /*ToDoList.Text
-             
-             testing if git works
-            testing
-             */
+            /*ToDoList.Text*/
         }
 
         private void InputBox_TextChanged(object sender, EventArgs e)
