@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,10 +17,13 @@ namespace Bath_Revision_Project
         public Form1()
         {
             InitializeComponent();
-   
+            
+
         }
         DataTable dt = new DataTable();
-        
+        int a = 0;
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -47,8 +51,9 @@ namespace Bath_Revision_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string Task = InputBox.Text;
-            /*ToDoList.Text*/
+            a = a + 1;
+            ToDoList.Rows.Add(a,InputBox.Text);
+           
         }
 
         private void InputBox_TextChanged(object sender, EventArgs e)
@@ -63,10 +68,19 @@ namespace Bath_Revision_Project
 
         private void ToDoList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            dt.Columns.Add("Task Number");
-            dt.Columns.Add("Task Name");
+            
+            
 
-            ToDoList.DataSource = dt;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
