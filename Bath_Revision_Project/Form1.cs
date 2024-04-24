@@ -52,7 +52,7 @@ namespace Bath_Revision_Project
         private void button2_Click(object sender, EventArgs e)
         {
             a = a + 1;
-            ToDoList.Rows.Add(a,InputBox.Text);
+            ToDoList.Rows.Add(a,SubjectName.Text,InputBox.Text);
            
         }
 
@@ -79,6 +79,11 @@ namespace Bath_Revision_Project
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SubjectName_TextChanged(object sender, EventArgs e)
         {
 
         }
