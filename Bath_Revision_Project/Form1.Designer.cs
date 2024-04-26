@@ -34,13 +34,14 @@
             this.InputBox = new System.Windows.Forms.TextBox();
             this.Add_List_Button = new System.Windows.Forms.Button();
             this.ToDoList = new System.Windows.Forms.DataGridView();
-            this.TaskNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.subject_label = new System.Windows.Forms.Label();
             this.SubjectName = new System.Windows.Forms.TextBox();
+            this.DeleteRowButton = new System.Windows.Forms.Button();
+            this.TaskNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ToDoList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,25 +110,6 @@
             this.ToDoList.TabIndex = 9;
             this.ToDoList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ToDoList_CellContentClick);
             // 
-            // TaskNo
-            // 
-            this.TaskNo.FillWeight = 35F;
-            this.TaskNo.HeaderText = "Task No.";
-            this.TaskNo.MinimumWidth = 25;
-            this.TaskNo.Name = "TaskNo";
-            // 
-            // Subject
-            // 
-            this.Subject.FillWeight = 65F;
-            this.Subject.HeaderText = "Subject";
-            this.Subject.Name = "Subject";
-            // 
-            // description
-            // 
-            this.description.FillWeight = 185.8351F;
-            this.description.HeaderText = "Task Description";
-            this.description.Name = "description";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -156,12 +138,45 @@
             this.SubjectName.TabIndex = 12;
             this.SubjectName.TextChanged += new System.EventHandler(this.SubjectName_TextChanged);
             // 
+            // DeleteRowButton
+            // 
+            this.DeleteRowButton.Location = new System.Drawing.Point(530, 375);
+            this.DeleteRowButton.Name = "DeleteRowButton";
+            this.DeleteRowButton.Size = new System.Drawing.Size(145, 23);
+            this.DeleteRowButton.TabIndex = 13;
+            this.DeleteRowButton.Text = "Delete Row";
+            this.DeleteRowButton.UseVisualStyleBackColor = true;
+            this.DeleteRowButton.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // TaskNo
+            // 
+            this.TaskNo.FillWeight = 35F;
+            this.TaskNo.HeaderText = "Task No.";
+            this.TaskNo.MaxInputLength = 0;
+            this.TaskNo.MinimumWidth = 25;
+            this.TaskNo.Name = "TaskNo";
+            this.TaskNo.ReadOnly = true;
+            this.TaskNo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Subject
+            // 
+            this.Subject.FillWeight = 65F;
+            this.Subject.HeaderText = "Subject";
+            this.Subject.Name = "Subject";
+            // 
+            // description
+            // 
+            this.description.FillWeight = 185.8351F;
+            this.description.HeaderText = "Task Description";
+            this.description.Name = "description";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(754, 410);
+            this.Controls.Add(this.DeleteRowButton);
             this.Controls.Add(this.SubjectName);
             this.Controls.Add(this.subject_label);
             this.Controls.Add(this.label2);
@@ -193,6 +208,7 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private System.Windows.Forms.Label subject_label;
         private System.Windows.Forms.TextBox SubjectName;
+        private System.Windows.Forms.Button DeleteRowButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn TaskNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subject;
         private System.Windows.Forms.DataGridViewTextBoxColumn description;

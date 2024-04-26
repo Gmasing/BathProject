@@ -51,11 +51,24 @@ namespace Bath_Revision_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
-            a = a + 1;
-            ToDoList.Rows.Add(a,SubjectName.Text,InputBox.Text);
            
+            ToDoList.Rows.Add(ToDoList.Rows.Count + 1,SubjectName.Text,InputBox.Text);
+            
         }
+
+        private void RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+       
+            for (int i = 0;i < ToDoList.Rows.Count;i++)
+            {
+                /*Console.WriteLine(i);*/
+
+                ToDoList.Rows[i].Cells[1].Value = ToDoList.Rows.Count;
+            }
+        }
+
+
+
 
         private void InputBox_TextChanged(object sender, EventArgs e)
         {
@@ -86,6 +99,18 @@ namespace Bath_Revision_Project
 
         private void SubjectName_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            foreach (DataGridViewCell Cell in ToDoList.SelectedCells)
+            {
+                if (Cell.Selected)
+                    ToDoList.Rows.RemoveAt(Cell.RowIndex);
+            }
+
+            
 
         }
     }
