@@ -51,6 +51,7 @@ namespace Bath_Revision_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
+            
             a = a + 1;
             ToDoList.Rows.Add(a,SubjectName.Text,InputBox.Text);
            

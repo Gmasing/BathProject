@@ -34,13 +34,13 @@
             this.InputBox = new System.Windows.Forms.TextBox();
             this.Add_List_Button = new System.Windows.Forms.Button();
             this.ToDoList = new System.Windows.Forms.DataGridView();
+            this.TaskNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.subject_label = new System.Windows.Forms.Label();
             this.SubjectName = new System.Windows.Forms.TextBox();
-            this.TaskNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ToDoList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,7 +95,6 @@
             this.ToDoList.AllowUserToAddRows = false;
             this.ToDoList.AllowUserToDeleteRows = false;
             this.ToDoList.AllowUserToResizeColumns = false;
-            this.ToDoList.AllowUserToResizeRows = false;
             this.ToDoList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ToDoList.BackgroundColor = System.Drawing.Color.White;
             this.ToDoList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -109,6 +108,25 @@
             this.ToDoList.Size = new System.Drawing.Size(663, 211);
             this.ToDoList.TabIndex = 9;
             this.ToDoList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ToDoList_CellContentClick);
+            // 
+            // TaskNo
+            // 
+            this.TaskNo.FillWeight = 35F;
+            this.TaskNo.HeaderText = "Task No.";
+            this.TaskNo.MinimumWidth = 25;
+            this.TaskNo.Name = "TaskNo";
+            // 
+            // Subject
+            // 
+            this.Subject.FillWeight = 65F;
+            this.Subject.HeaderText = "Subject";
+            this.Subject.Name = "Subject";
+            // 
+            // description
+            // 
+            this.description.FillWeight = 185.8351F;
+            this.description.HeaderText = "Task Description";
+            this.description.Name = "description";
             // 
             // label2
             // 
@@ -134,28 +152,9 @@
             // 
             this.SubjectName.Location = new System.Drawing.Point(458, 121);
             this.SubjectName.Name = "SubjectName";
-            this.SubjectName.Size = new System.Drawing.Size(159, 20);
+            this.SubjectName.Size = new System.Drawing.Size(127, 20);
             this.SubjectName.TabIndex = 12;
             this.SubjectName.TextChanged += new System.EventHandler(this.SubjectName_TextChanged);
-            // 
-            // TaskNo
-            // 
-            this.TaskNo.FillWeight = 35F;
-            this.TaskNo.HeaderText = "Task No.";
-            this.TaskNo.MinimumWidth = 25;
-            this.TaskNo.Name = "TaskNo";
-            // 
-            // Subject
-            // 
-            this.Subject.FillWeight = 65F;
-            this.Subject.HeaderText = "Subject";
-            this.Subject.Name = "Subject";
-            // 
-            // description
-            // 
-            this.description.FillWeight = 185.8351F;
-            this.description.HeaderText = "Task Description";
-            this.description.Name = "description";
             // 
             // Form1
             // 
