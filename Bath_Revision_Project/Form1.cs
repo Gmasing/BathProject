@@ -20,23 +20,20 @@ namespace Bath_Revision_Project
             
 
         }
-        DataTable dt = new DataTable();
-        int a = 0;
-
-
-
+        
+        // When the 'Begin' button is clicked
         private void button1_Click(object sender, EventArgs e)
         {
-             if (Application.OpenForms.OfType<Form2>().Any())
+             if (Application.OpenForms.OfType<Form2>().Any()) //Checks if Form2 is open in any instance.
              {
-                 Application.OpenForms.OfType<Form2>().First().BringToFront();
+                 Application.OpenForms.OfType<Form2>().First().BringToFront(); //If is open it takes the window and pulls it to the front
              }
              else
              {
-                 var newform = new Form2();
-                 newform.Show();
+                 var newform = new Form2(); //Else creates new instance of form 2
+                 newform.Show(); // Displays newly created form
              }
-             Application.OpenForms.OfType<Form1>().First().Hide();
+             Application.OpenForms.OfType<Form1>().First().Hide();  //Hides any instance of Form1
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -53,20 +50,11 @@ namespace Bath_Revision_Project
         {
            
             ToDoList.Rows.Add(ToDoList.Rows.Count + 1,SubjectName.Text,InputBox.Text);
+            //Adds new item in the Data Grid View; takes values from the text boxes for Subject and Description
             
         }
 
-        private void RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
-        {
        
-            for (int i = 0;i < ToDoList.Rows.Count;i++)
-            {
-                /*Console.WriteLine(i);*/
-
-                ToDoList.Rows[i].Cells[1].Value = ToDoList.Rows.Count;
-            }
-        }
-
 
 
 
@@ -104,10 +92,11 @@ namespace Bath_Revision_Project
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            foreach (DataGridViewCell Cell in ToDoList.SelectedCells)
+            foreach (DataGridViewCell Cell in ToDoList.SelectedCells) //Applies to all cells selected in the DataGridView (the list)
             {
                 if (Cell.Selected)
                     ToDoList.Rows.RemoveAt(Cell.RowIndex);
+                //If cell is selected it is removed.
             }
 
             

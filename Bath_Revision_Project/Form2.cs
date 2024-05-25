@@ -23,10 +23,10 @@ namespace Bath_Revision_Project
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) //When 'Go back' is clicked
         {
-            Application.OpenForms.OfType<Form1>().First().Show();
-            Application.OpenForms.OfType<Form2>().First().Close();
+            Application.OpenForms.OfType<Form1>().First().Show(); //Any instance of Form1 is displayed
+            Application.OpenForms.OfType<Form2>().First().Close(); // Any Instance of Form2 is ended/closed
         }
 
         private void Form2_Load(object sender, EventArgs e)
