@@ -54,10 +54,6 @@ namespace Bath_Revision_Project
             
         }
 
-       
-
-
-
         private void InputBox_TextChanged(object sender, EventArgs e)
         {
 
@@ -70,9 +66,6 @@ namespace Bath_Revision_Project
 
         private void ToDoList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-            
-
         }
 
         private void label2_Click(object sender, EventArgs e)
